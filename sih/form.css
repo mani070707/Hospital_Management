@@ -1,0 +1,181 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #0088ff;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Layout */
+.left-side {
+    width: 50%;
+    background-color: #0088ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.right-side {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Add Symptom field */
+.add-symptom-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 40px;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    color: #333366;
+}
+
+.add-symptom-container label {
+    font-size: 1.2rem;
+}
+
+.add-symptom-container .symptom-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.symptom-field:focus + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+/* Dropdown styles */
+.dropdown-menu .checkbox {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-menu .checkbox:hover {
+    background-color: #f0f0f0;
+}
+
+/* Selected symptoms list */
+.selected-symptoms {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.selected-symptoms span {
+    background-color: #0088ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/* Days input styles */
+.days-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 40px;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    color: #333366;
+}
+
+.days-input-container label {
+    font-size: 1.2rem;
+}
+
+.days-input-container input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+    background-color: #0088ff;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+/* Result Div styles */
+#result {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    display: none; /* Hide initially */
+}
+
+/* Heading style */
+#result h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Paragraph style */
+#result p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.5;
+}

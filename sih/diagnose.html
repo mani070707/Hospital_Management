@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnose My Disease</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        /* Hide result div initially */
+        #result {
+            display: none;
+            margin-top: 20px; /* Add margin for spacing */
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-side">
+        Diagnose My Disease
+    </div>
+    <div class="right-side">
+        <form id="diagnose-form">
+            <div class="add-symptom-container">
+                <label for="symptom">Add a Symptom:</label>
+                <input type="text" id="symptom" class="symptom-field" placeholder="Select Symptoms" readonly>
+                <div class="dropdown-menu"></div>
+                <div class="selected-symptoms" id="selected-symptoms"></div>
+            </div>
+
+            <div class="days-input-container">
+                <label for="days">Number of Days:</label>
+                <input type="number" id="days" name="days" min="0" placeholder="Enter number of days" required>
+            </div>
+            <div id="result"></div>
+            <button type="submit">Submit</button>
+        </form>
+         <!-- Move the result div within the right-side container -->
+    </div>
+    <script src="diagnose.js"></script>
+</body>
+</html>
+
